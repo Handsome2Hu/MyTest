@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<body style="background-image: url({% static "/img/2.jpg" %});">
+<head>
+    <title>Article Page</title>
+</head>
+<body>
+
+<h1>{{article.title}}</h1>
+<br/>
+<h3>{{article.content}}</h3>
+<br/><br/>
+<a href="">点击修改</a>   <a href="http://www.weiwho.xin:8000">返回</a>
+ 
+</body>
+</html>

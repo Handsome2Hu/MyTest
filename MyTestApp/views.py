@@ -29,3 +29,7 @@ def add3(request):
     return HttpResponse('''
 	<h1><center>扫码了你也是猪精</center></h1>
 	''')
+
+def article_page(request,article_id):
+    article = models.Article.objects.get(pk=article_id)
+    return render(request,'blog.html',{'article' : article})

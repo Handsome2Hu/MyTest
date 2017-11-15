@@ -21,7 +21,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.index),
-    url(r'^',include('MyTestApp.urls')),
+    url(r'^',include('MyTestApp.urls',namespace='blog')),
     #url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.STATIC_ROOT}),
     #url(r'^1',views.add2,name='add2'),
     #url(r'^qrcode',views.generate_qrcode,name='qrcode'),
