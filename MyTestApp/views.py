@@ -11,10 +11,10 @@ from django.http import HttpResponse
 def index(request):
     articles = models.Article.objects.all()
     return render(request,"home.html",{'articles':articles})
-    return render(request,"home.html")
+    #return render(request,"home.html")
 
 def add2(request):
-    return HttpResponse("想复仇？你还嫩着！")
+    return HttpResponse("想复仇？你还嫩着！！")
 
 def generate_qrcode(request):
     img = qrcode.make("http://weiwho.xin:8000/2")
