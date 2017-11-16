@@ -33,3 +33,6 @@ def add3(request):
 def article_page(request,article_id):
     article = models.Article.objects.get(pk=article_id)
     return render(request,'blog.html',{'article' : article})
+
+def edit_page(request):
+    return render(request,'blog_edit_page.html')
