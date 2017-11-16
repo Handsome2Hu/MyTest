@@ -2,6 +2,13 @@
 {% load staticfiles %}
 <html>
 <body style="background-image: url({% static "/img/1.jpg" %});">
+<h1>
+   <a href = "{% url 'blog:edit_page' %}">新文章</a>
+</h1>
+{% for article in articles %}
+   <a href="{% url 'blog:article_page' article.id %}">{{article.title}}</a>
+   <br/>
+{% endfor %}
 <head>
    <title>你这个猪精</title>
 </head>
@@ -18,12 +25,6 @@
 
 <img src="http://weiwho.xin:8000/qrcode"/>
 
-<h1>
-   <a href = "">新文章</a>
-</h1>
-{% for article in articles %}
-   <a href="{% url 'blog:article_page' article.id %}">{{article.title}}</a>
-   <br/>
-{% endfor %}
+
 </body>
 </html>

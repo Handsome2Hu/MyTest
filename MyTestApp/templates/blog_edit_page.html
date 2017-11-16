@@ -3,8 +3,9 @@
 <head>
     <title>猪精，快点修改！</title>
 </head>
-<body style="background-image: url({% static "/img/3.png" %});">>
-<form action="" method="">
+<body style="background-image: url({% static "/img/3.png" %});">
+<form action="{% url 'blog:edit_action' %}" method="post">
+    {% csrf_token %}
     <label>猪精要改的标题
         <input type="text" name="title">
     </label>
@@ -13,6 +14,6 @@
         <input type="text" name="content">
     </label>
     <br/>
-    <input type="submit">
+    <input type="submit" value="猪精修改">
 </form>
 </body>
