@@ -3,7 +3,7 @@
 <html>
 <body style="background-image: url({% static "/img/1.jpg" %});">
 <h1>
-   <a href = "{% url 'blog:edit_page' %}">新文章</a>
+   <a href = "{% url 'blog:edit_page' %}">猪精点我，添加文字可以显示出来，不介意你匿名表白哟~</a>
 </h1>
 {% for article in articles %}
    <a href="{% url 'blog:article_page' article.id %}">{{article.title}}</a>
